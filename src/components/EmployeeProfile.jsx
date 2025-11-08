@@ -18,7 +18,7 @@ function EmployeeProfile() {
     useEffect(() => {
     // alert(id);
     axios
-    .get(`http://localhost:8080/getById?id=${id}`)
+    .get(`https://employee-crud-3pz2.onrender.com/getById?id=${id}`)
 .then((response)=> setEmployee(response.data))
 .catch((error) => alert(error.message || 'Something Went Wrong'));
     }, [id]);
@@ -32,7 +32,7 @@ function EmployeeProfile() {
         e.preventDefault();
 
         axios
-            .put('http://localhost:8080/update', {
+            .put('https://employee-crud-3pz2.onrender.com/update', {
                 id: employee.id,
                 name: employee.name,
                 email: employee.email,
